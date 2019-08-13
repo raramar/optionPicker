@@ -28,4 +28,4 @@ function decision(array) {
 }
 
 let makelist = createList();
-decision(makelist);
+let makeDecision = decision(makelist);
