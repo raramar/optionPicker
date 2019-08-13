@@ -8,6 +8,7 @@ console.log(addBtnElement);
 addBtnElement.addEventListener("click", function() {
   choicesArray.push(inputValue.value);
   console.log(choicesArray);
+  inputValue.value = "";
 });
 
 // let choicesArray = [];
