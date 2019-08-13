@@ -1,31 +1,42 @@
 console.log("rashell did it");
+let addBtnElement = document.getElementById("add-btn");
+let inputValue = document.getElementById("option-Input");
 let choicesArray = [];
-let arraySize;
-let randchoice;
-let choice;
-// console.log(choice);
 
-let userInput;
+console.log(addBtnElement);
 
-// gets user input
-function createList() {
-  for (let i = 0; i < 4; i++) {
-    userInput = window.prompt("what you want to watch");
-    choicesArray.push(userInput);
-  }
+addBtnElement.addEventListener("click", function() {
+  choicesArray.push(inputValue.value);
   console.log(choicesArray);
-  return choicesArray;
-}
+});
 
-function decision(array) {
-  arraySize = array.length;
-  randchoice = Math.floor(Math.random() * arraySize);
+// let choicesArray = [];
+// let arraySize;
+// let randchoice;
+// let choice;
+// // console.log(choice);
 
-  choice = array[randchoice];
-  console.log("choice " + choice);
-  console.log("random num " + randchoice);
-  console.log("array size " + arraySize);
-}
+// let userInput;
 
-let makelist = createList();
-let makeDecision = decision(makelist);
+// // gets user input
+// function createList() {
+//   for (let i = 0; i < 4; i++) {
+//     userInput = window.prompt("what you want to watch");
+//     choicesArray.push(userInput);
+//   }
+//   console.log(choicesArray);
+//   return choicesArray;
+// }
+
+// function decision(array) {
+//   arraySize = array.length;
+//   randchoice = Math.floor(Math.random() * arraySize);
+
+//   choice = array[randchoice];
+//   console.log("choice " + choice);
+//   console.log("random num " + randchoice);
+//   console.log("array size " + arraySize);
+// }
+
+// let makelist = createList();
+// let makeDecision = decision(makelist);
