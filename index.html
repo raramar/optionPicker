@@ -8,15 +8,16 @@
     <header>
       <div class="text-box">
         <div class="input-holder">
-          <input id="option-Input" type="text" text="Enter Options" value="" />
+          <input id="option-input" type="text" placeholder="Enter Options" />
         </div>
-
-        <button id="add-btn">Add</button>
-      </div>
-      <div>
-        <h1>What should You do?</h1>
+        <button id="add-btn" onclick="addOption()">Add</button>
       </div>
     </header>
+    <div>
+      <h1>What should You do?</h1>
+      <ol id="allOptions"></ol>
+    </div>
+
     <script src="main.js"></script>
   </body>
 </html>
