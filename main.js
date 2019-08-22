@@ -4,26 +4,36 @@ let inputValue = document.getElementById("option-input");
 let choicesArray = [];
 
 function addOption() {
-  let deleteBtn = document.createElement("button");
-  deleteBtn.classList.add("deleteBtn");
-  deleteBtn.innerHTML = "DELETE";
+    let container = document.getElementById("allOptions");
 
-  let item = inputValue.value;
-  let text = document.createTextNode(item);
-  let newitem = document.createElement("li");
-  newitem.appendChild(text);
+    let newListItem = document.createElement("li");
+    container.appendChild(newListItem);
 
-  document.getElementById("allOptions").appendChild(newitem);
-  document.getElementById("allOptions").appendChild(deleteBtn);
+    let itemBox = document.createElement("div");
+    itemBox.className = "item";
+    newListItem.appendChild(itemBox);
+
+    let text = document.createElement("p");
+    text.innerHTML = inputValue.value;
+
+
+    let deleteBtn = document.createElement("button");
+    deleteBtn.className = "deleteBtn";
+    deleteBtn.innerHTML = "DELETE";
+
+    itemBox.appendChild(text);
+    itemBox.appendChild(deleteBtn);
+
+
+    deleteBtn.addEventListener("click", function() {
+        deleteBtn.parentElement.parentElement.remove();
+        console.log("did it delete?")
+
+    });
 }
 
-// function deleteList() {
-//   for (let i = 0; i<optionList.length;i++){
-
-//   }
-// }
 addBtnElement.addEventListener("click", function() {
-  choicesArray.push(inputValue.value);
-  console.log(choicesArray);
-  inputValue.value = "";
+    choicesArray.push(inputValue.value);
+    console.log(choicesArray);
+    inputValue.value = "";
 });
