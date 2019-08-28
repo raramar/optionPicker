@@ -1,10 +1,12 @@
 console.log("rashell did it");
 let addBtnElement = document.getElementById("add-btn");
 let inputValue = document.getElementById("option-input");
+let container = document.getElementById("allOptions");
+let randBtn = document.getElementById('randomChoice');
 let choicesArray = [];
 
 function addOption() {
-    let container = document.getElementById("allOptions");
+    // let container = document.getElementById("allOptions");
 
     let newListItem = document.createElement("li");
     newListItem.className = "li-option"
@@ -43,4 +45,30 @@ addBtnElement.addEventListener("click", function() {
     choicesArray.push(inputValue.value);
     console.log(choicesArray);
     inputValue.value = "";
+});
+
+// let chooseRandom = () => {
+//     let i = Math.floor(Math.random() * choicesArray.length);
+//     console.log(i)
+//     let choice = choicesArray[i]
+//     console.log(choice)
+
+//     let p = document.createElement('p');
+//     p.innerHTML = `Choice is : ${p}`;
+
+//     let headerEl = document.querySelector('.header');
+//     headerEl.appendChild(p);
+// }
+
+randBtn.addEventListener('click', function() {
+    let i = Math.floor(Math.random() * choicesArray.length);
+    console.log(i)
+    let choice = choicesArray[i]
+    console.log(choice)
+
+    let p = document.createElement('p');
+    p.className = "choiceIs"
+    p.innerHTML = `Choice is : ${choice}`;
+    container.appendChild(p);
+
 });
