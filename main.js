@@ -60,20 +60,3 @@ let chooseRandom = () => {
     container.appendChild(p);
 }
 randBtn.addEventListener('click', chooseRandom)
-
-
-
-/* THIS WORKSSSS------------------BELOW-----*/
-
-// randBtn.addEventListener('click', function() {
-//     let i = Math.floor(Math.random() * choicesArray.length);
-//     console.log(i)
-//     let choice = choicesArray[i]
-//     console.log(choice)
-
-//     let p = document.createElement('p');
-//     p.className = "choiceIs"
-//     p.innerHTML = `Choice is : ${choice}`;
-//     container.appendChild(p);
-
-// });
