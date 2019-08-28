@@ -7,7 +7,9 @@ function addOption() {
     let container = document.getElementById("allOptions");
 
     let newListItem = document.createElement("li");
+    newListItem.className = "li-option"
     container.appendChild(newListItem);
+
 
     let itemBox = document.createElement("div");
     itemBox.className = "item";
@@ -19,16 +21,21 @@ function addOption() {
 
     let deleteBtn = document.createElement("button");
     deleteBtn.className = "deleteBtn";
-    deleteBtn.innerHTML = "DELETE";
-
-    itemBox.appendChild(text);
+    deleteBtn.innerHTML = "x";
     itemBox.appendChild(deleteBtn);
+    itemBox.appendChild(text);
+
 
 
     deleteBtn.addEventListener("click", function() {
-        deleteBtn.parentElement.parentElement.remove();
-        console.log("did it delete?")
+        // console.log(deleteBtn.parentElement)
+        let wordInArray = deleteBtn.parentElement.getElementsByTagName("p")[0].innerHTML
+        let i = choicesArray.indexOf(wordInArray)
+            // console.log(choicesArray)
+        choicesArray.splice(i, 1)
+            // console.log(choicesArray)
 
+        deleteBtn.parentElement.parentElement.remove();
     });
 }
 
