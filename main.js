@@ -18,6 +18,7 @@ function addOption() {
     newListItem.appendChild(itemBox);
 
     let text = document.createElement("p");
+    text.className = "optionName"
     text.innerHTML = inputValue.value;
 
 
@@ -58,5 +59,10 @@ let chooseRandom = () => {
     p.className = "choiceIs"
     p.innerHTML = `Choice is : ${choice}`;
     container.appendChild(p);
+
+    let options = document.querySelectorAll('.optionName');
+    let highlightChoice = options[i].parentElement.parentElement;
+    highlightChoice.style.backgroundColor = "yellowgreen";
+
 }
-randBtn.addEventListener('click', chooseRandom)
+randBtn.addEventListener('click', chooseRandom);
