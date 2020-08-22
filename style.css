@@ -9,6 +9,13 @@ header {
     /* background-color: black; */
 }
 
+header h1 {
+    text-align: center;
+    padding: 20px 20px 0 20px;
+    color: #F5E9E9;
+    text-shadow: 3px 5px 8px #4C49F4;
+}
+
 .text-box {
     width: 500px;
     height: 100px;
@@ -62,53 +69,57 @@ header {
     background-color: #2B2B33;
 }
 
-#container>h1 {
+
+/* #container>h1 {
     padding: 20px 20px 0 20px;
     color: #F5E9E9;
     text-shadow: 3px 5px 8px #4C49F4;
-}
+} */
 
 #allOptions {
-    margin: 0 auto;
+    /* margin: 0 auto;
     max-width: 497px;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap; */
     justify-content: center;
+    margin: 0 auto;
+    width: 30%;
 }
 
 .li-option {
-    height: 122px;
-    width: 115px;
+    /* height: 122px;
+    width: 115px; */
     list-style: none;
-    margin: 20px;
-    background-color: #EAF6FF;
-    border-radius: 11px;
+    /* margin: 20px; */
+    /* background-color: #EAF6FF; */
+    /* border-radius: 11px; */
 }
 
 .item {
     position: relative;
-    padding: 15px;
+    /* padding: 15px; */
 }
 
 .item>p {
-    height: 86px;
+    height: 41px;
     overflow: hidden;
     font-size: 19px;
     white-space: nowwrap;
     text-overflow: ellipsis;
     position: relative;
-    top: -16px;
+    top: 4px;
 }
 
 .deleteBtn {
-    position: relative;
-    top: -13px;
-    left: 29px;
+    position: absolute;
+    left: 76%;
+    right: 47%;
     padding: 4px;
     border: none;
     color: inherit;
     background-color: transparent;
     font-size: 15px;
+    z-index: 1500;
 }
 
 .main {
@@ -123,4 +134,10 @@ header {
     font-size: 50px;
     /* animation: backInDown;
     animation-duration: 2s; */
+}
+
+ol li {
+    padding: 10px 7px 0px 10px;
+    color: #F5E9E9;
+    text-shadow: 3px 5px 8px #4C49F4;
 }
